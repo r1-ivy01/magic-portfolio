@@ -2,49 +2,46 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "A Rahul",
+  lastName: "",
+  name: "A Rahul",
+  role: "Graphics Designer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "loco.affiliate@gmail.com",
+  location: "Tamil Nadu, India",
+  languages: ["English", "Tamil"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Design drops, breakdowns, and creative notes.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
+    link: "https://github.com/r1-ivy01",
+    essential: false,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/amudala-rahul-kumar-841796381",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/loco.pd/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
+    link: "https://www.threads.com/@loco.pd",
+    essential: false,
   },
   {
     name: "Email",
@@ -56,28 +53,30 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Premium visuals. Smooth motion. Dark aesthetic.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">{person.name}</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I’m <Text as="span" size="xl" weight="strong">{person.name}</Text> — a graphics designer focused
+      on premium posters, typography, and brand visuals with a dark, gradient-rich style.
+      <br /> I design to make things look expensive, clean, and scroll-stopping.
+    </>
   ),
 };
 
@@ -94,139 +93,111 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m Rahul — a Tamil Nadu–based graphics designer. My style is clean but bold: dark themes,
+        premium gradients, sharp type, and smooth composition. I mostly create posters, social
+        creatives, and brand visuals that feel cinematic and high-end.
+        <br /><br />
+        If you want design that instantly looks “premium”, I’m the guy.
       </>
     ),
   },
+
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance / Personal Brand",
+        timeframe: "2023 — Present",
+        role: "Graphics Designer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Designed premium posters, social creatives, and typography-heavy layouts for multiple niches.</>,
+          <>Built consistent dark-theme visual identities with gradients, textures, and clean hierarchy.</>,
+          <>Improved content quality by creating reusable templates for faster, consistent posting.</>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Creative Collaborations",
+        timeframe: "2022 — 2023",
+        role: "Visual Designer",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Worked with creators/pages to upgrade their visuals into a more cinematic, professional look.</>,
+          <>Created poster concepts and brand-style frames for reels, story posts, and campaign creatives.</>,
         ],
         images: [],
       },
     ],
   },
+
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Self-Taught Design Practice",
+        description: <>Typography, composition, color theory, and modern poster aesthetics.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Creative Tools & Workflow",
+        description: <>Learning through real projects: iteration, feedback, and visual consistency.</>,
       },
     ],
   },
+
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Tools & Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Design & Poster Workflow",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Premium poster composition, cinematic lighting feel, texture layering, and clean layout hierarchy.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Posters", icon: "sparkles" as any },
+          { name: "Typography", icon: "type" as any },
+          { name: "Brand Visuals", icon: "palette" as any },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Tools I Use",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Fast iterations with modern design tools. Clean exports for Instagram-ready posts and reels.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Figma", icon: "figma" },
+          { name: "Photoshop", icon: "image" as any },
+          { name: "Illustrator", icon: "pen-tool" as any },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Style Strength",
+        description: (
+          <>
+            Dark premium aesthetics: gradients, glow, subtle grain, strong contrast, and sharp type.
+          </>
+        ),
+        tags: [
+          { name: "Dark Aesthetic", icon: "moon" as any },
+          { name: "Gradients", icon: "droplet" as any },
+          { name: "Clean Layout", icon: "layout" as any },
         ],
+        images: [],
       },
     ],
   },
@@ -235,70 +206,26 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Notes on design, posters & process",
+  description: `Short updates and breakdowns by ${person.name}`,
+  // If you don’t want blog posts now, keep the page but don’t add posts.
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Selected work and case studies by ${person.name}`,
+  // You can later add actual project pages (.mdx) when ready.
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  title: `Gallery – ${person.name}`,
+  description: `A visual collection by ${person.name}`,
+  // No placeholder image links. Add your images later.
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
