@@ -183,24 +183,22 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
+  label: "",
   title: "",
   description: "",
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design work by ${person.name}`,
+  label: "",
+  title: "",
+  description: "",
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Gallery – ${person.name}`,
-  description: `Creative collection by ${person.name}`,
+  label: "",
+  title: "",
+  description: "",
   images: [],
 };
-
-export { person, social, newsletter, home, about, blog, work, gallery };
