@@ -8,23 +8,17 @@ const person: Person = {
   role: "Graphics Designer",
   avatar: "/images/avatar.jpg",
   email: "loco.affiliate@gmail.com",
-  location: "Tamil Nadu, India",
+  location: "Asia/Kolkata", // MUST be timezone format
   languages: ["English", "Tamil"],
 };
 
 const newsletter: Newsletter = {
   display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>Design drops, breakdowns, and creative notes.</>,
+  description: <>Design drops and creative breakdowns.</>,
 };
 
 const social: Social = [
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/r1-ivy01",
-    essential: false,
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
@@ -36,12 +30,6 @@ const social: Social = [
     icon: "instagram",
     link: "https://www.instagram.com/loco.pd/",
     essential: true,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@loco.pd",
-    essential: false,
   },
   {
     name: "Email",
@@ -56,13 +44,13 @@ const home: Home = {
   image: "",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Premium visuals. Smooth motion. Dark aesthetic.</>,
+  description: `Portfolio website showcasing work by ${person.name}`,
+  headline: <>Premium visuals. Smooth motion. Dark aesthetics.</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">{person.name}</strong>{" "}
+        <strong className="ml-4">{person.name}</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -73,9 +61,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I’m <Text as="span" size="xl" weight="strong">{person.name}</Text> — a graphics designer focused
-      on premium posters, typography, and brand visuals with a dark, gradient-rich style.
-      <br /> I design to make things look expensive, clean, and scroll-stopping.
+      I’m <Text as="span" size="xl" weight="strong">{person.name}</Text> — a graphics designer
+      focused on premium posters, typography, and brand visuals with a dark,
+      gradient-rich aesthetic.
     </>
   ),
 };
@@ -84,9 +72,9 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
-    display: true,
+    display: false,
     subItems: false,
   },
   avatar: {
@@ -101,27 +89,27 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I’m Rahul — a Tamil Nadu–based graphics designer. My style is clean but bold: dark themes,
-        premium gradients, sharp type, and smooth composition. I mostly create posters, social
-        creatives, and brand visuals that feel cinematic and high-end.
+        Rahul is a Tamil Nadu–based graphics designer crafting premium dark
+        aesthetics with clean typography and strong composition.
         <br /><br />
-        If you want design that instantly looks “premium”, I’m the guy.
+        His work focuses on posters, brand visuals, and social creatives that
+        look modern, bold, and expensive.
       </>
     ),
   },
 
   work: {
     display: true,
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "Freelance / Personal Brand",
+        company: "Freelance Designer",
         timeframe: "2023 — Present",
         role: "Graphics Designer",
         achievements: [
-          <>Designed premium posters, social creatives, and typography-heavy layouts for multiple niches.</>,
-          <>Built consistent dark-theme visual identities with gradients, textures, and clean hierarchy.</>,
-          <>Improved content quality by creating reusable templates for faster, consistent posting.</>,
+          <>Designed high-impact posters and typography-driven layouts.</>,
+          <>Created cohesive dark-themed visual identities.</>,
+          <>Built reusable templates for fast, consistent social content.</>,
         ],
         images: [],
       },
@@ -130,8 +118,8 @@ const about: About = {
         timeframe: "2022 — 2023",
         role: "Visual Designer",
         achievements: [
-          <>Worked with creators/pages to upgrade their visuals into a more cinematic, professional look.</>,
-          <>Created poster concepts and brand-style frames for reels, story posts, and campaign creatives.</>,
+          <>Worked with creators to upgrade their brand visuals.</>,
+          <>Developed premium gradients and cinematic-style compositions.</>,
         ],
         images: [],
       },
@@ -140,63 +128,53 @@ const about: About = {
 
   studies: {
     display: true,
-    title: "Studies",
+    title: "Learning & Growth",
     institutions: [
       {
-        name: "Self-Taught Design Practice",
-        description: <>Typography, composition, color theory, and modern poster aesthetics.</>,
+        name: "Design Practice",
+        description: <>Focused on typography, layout, and color theory.</>,
       },
       {
-        name: "Creative Tools & Workflow",
-        description: <>Learning through real projects: iteration, feedback, and visual consistency.</>,
+        name: "Creative Tools",
+        description: <>Hands-on learning through real-world design projects.</>,
       },
     ],
   },
 
   technical: {
     display: true,
-    title: "Tools & Skills",
+    title: "Skills & Tools",
     skills: [
       {
-        title: "Design & Poster Workflow",
+        title: "Poster & Typography",
         description: (
           <>
-            Premium poster composition, cinematic lighting feel, texture layering, and clean layout hierarchy.
+            Premium poster composition with bold typography and clean
+            hierarchy.
           </>
         ),
-        tags: [
-          { name: "Posters", icon: "sparkles" as any },
-          { name: "Typography", icon: "type" as any },
-          { name: "Brand Visuals", icon: "palette" as any },
-        ],
+        tags: [],
         images: [],
       },
       {
-        title: "Tools I Use",
+        title: "Design Tools",
         description: (
           <>
-            Fast iterations with modern design tools. Clean exports for Instagram-ready posts and reels.
+            Experienced with modern design workflows for fast iteration and
+            polished output.
           </>
         ),
-        tags: [
-          { name: "Figma", icon: "figma" },
-          { name: "Photoshop", icon: "image" as any },
-          { name: "Illustrator", icon: "pen-tool" as any },
-        ],
+        tags: [],
         images: [],
       },
       {
-        title: "Style Strength",
+        title: "Aesthetic Direction",
         description: (
           <>
-            Dark premium aesthetics: gradients, glow, subtle grain, strong contrast, and sharp type.
+            Dark themes, gradients, glow effects, and sharp visual contrast.
           </>
         ),
-        tags: [
-          { name: "Dark Aesthetic", icon: "moon" as any },
-          { name: "Gradients", icon: "droplet" as any },
-          { name: "Clean Layout", icon: "layout" as any },
-        ],
+        tags: [],
         images: [],
       },
     ],
@@ -206,25 +184,22 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Notes on design, posters & process",
-  description: `Short updates and breakdowns by ${person.name}`,
-  // If you don’t want blog posts now, keep the page but don’t add posts.
+  title: "",
+  description: "",
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Selected work and case studies by ${person.name}`,
-  // You can later add actual project pages (.mdx) when ready.
+  description: `Design work by ${person.name}`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
   title: `Gallery – ${person.name}`,
-  description: `A visual collection by ${person.name}`,
-  // No placeholder image links. Add your images later.
+  description: `Creative collection by ${person.name}`,
   images: [],
 };
 
